@@ -1,0 +1,276 @@
+html {
+    background-color: lightgray;
+}
+
+body {
+    background-color: lightgray;
+    margin: 0;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 1.5em;
+    color: gray;
+}
+
+.progressbar {
+    background-color: darkgray;
+    height: 0.5em;
+    position: fixed;
+}
+
+.currentcard {
+    padding: 2%;
+    vertical-align: middle;
+    width: 15em;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+}
+
+.hanzi {
+    font-size: 7em;
+    text-align: center;
+    padding-bottom: 0.2em;
+    border-bottom: 1px solid #D3D3D3;
+    margin-bottom: 0.2em;
+}
+
+.translation {
+    text-align: center;
+    font-size: 0.8em;
+}
+
+.pinyin {
+    text-align: center;
+    font-size: 0.8em;
+    margin-top: 0.5em;
+}
+
+.item {
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+    background-color: white;
+    box-shadow: 0 5px 5px #CCC;
+    font-size: 1.5em;
+}
+
+.textinput {
+    background-color: #FFF;
+    box-shadow: 0 5px 5px #CCC;
+    width: 20em;
+    height: 2em;
+    position: fixed;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    bottom: 2em;
+    border: 1px solid white;
+}
+
+.textinput input {
+    border: 0 none;
+    margin-top: 0.5em;
+    font-size: 1em;
+    text-align: center;
+    width: 100%;
+    background: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nowlearning {
+    position: fixed;
+    text-align: center;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 2em;
+}
+
+.coursepage {
+    text-align: center;
+}
+
+.coursepage img {
+    width: 15%;
+    margin-top: 2em;
+}
+
+.coursepage .section {
+    width: 70%;
+    margin: 2em auto;
+}
+
+.coursepage .characters {
+    width: 20em;
+    text-align: left;
+    margin-left: auto;
+}
+
+.coursepage .character {
+    font-size: 2em;
+    padding: 0.2em;
+    background-color: white;
+    margin: 0.2em;
+    box-shadow: 0 5px 5px #CCC;
+    width: 1em;
+    display: inline-block;
+    border-radius: 0.1em;
+}
+
+.coursepage .character:hover {
+    background-color: #CC2336;
+    color: white;
+    cursor: pointer;
+}
+
+.coursepage .sectiontitle {
+    margin-right: auto;
+    text-align: left;
+    float: left;
+}
+
+.coursepage .sectiontitle h2 {
+    margin: 0;
+    text-decoration: none;
+}
+
+.coursepage .btnlearn {
+    border-radius: 0.2em;
+    background-color: #CC2336;
+    color: white;
+    padding: 0.2em;
+    font-size: 0.8em;
+    cursor: pointer;
+}
+
+.coursepage .btnpractice {
+    border-radius: 0.2em;
+    background-color: #336699;
+    color: white;
+    padding: 0.2em;
+    font-size: 0.8em;
+    cursor: pointer;
+}
+
+.coursepage .footer {
+    border-top: 1px solid darkgray;
+    padding: 1em;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    font-size: smaller;
+}
+
+.coursepage .footer .github {
+    text-decoration: none;
+    color: darkgray;
+    float: right;
+}
+
+.btnprev {
+    font-size: 2em;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 auto 0 5%;
+    left: 0;
+    cursor: pointer;
+}
+
+.btnnext {
+    font-size: 2em;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 5% 0 auto;
+    right: 0;
+    cursor: pointer;
+}
+
+.btnclose {
+    position: absolute;
+    top: 2em;
+    right: 10%;
+    cursor: pointer;
+    z-index: 500;
+}
+
+.btnfullscreen {
+    position: absolute;
+    top: 2em;
+    right: 5%;
+    cursor: pointer;
+    z-index: 500;
+}
+
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: none repeat scroll 0 0 #fff;
+    background: none repeat scroll 0 0 #f9f9f9;
+}
+
+.sk-spinner-hanzi.sk-spinner {
+    background-color: #21639C;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    position: relative;
+    -webkit-animation: sk-innerCircle 1s linear infinite;
+    animation: sk-innerCircle 1s linear infinite;
+}
+
+.sk-spinner-hanzi .sk-inner-circle {
+    display: block;
+    background-color: #fff;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    border-radius: 8px;
+    top: 5px;
+    left: 5px;
+}
+
+@-webkit-keyframes sk-innerCircle {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes sk-innerCircle {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}

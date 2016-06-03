@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>hanzi</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/sweetalert.css">
+</head>
+<body>
+
+<div class="preloader" id="preloader">
+    <div class="sk-spinner sk-spinner-hanzi">
+        <span class="sk-inner-circle"></span>
+    </div>
+</div>
+
+<div id="app">
+    <div class="coursepage" v-if="page == 'course'">
+        <img src="logo.svg">
+
+        <div class="section" v-for="category in json">
+            <div class="sectiontitle">
+                <h2>{{ category.name }}</h2>
+                <span class="btnlearn" @click="goToLearning(category.characters[0], category)">learn</span>
+                <span class="btnpractice" @click="goToPractice(category)">practice</span>
+            </div>
+
+            <div class="characters">
+                <div class="character" v-for="character in category.characters" @click="goToLearning(character, category)">
+                    {{ character.hanzi }}
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Rewritten by <a href="http://thinky.cz" target="_blank">Thinky</a>, inspired by <a href="http://tomires.eu" target="_blank">Tomires</a>
+            <a href="" class="github">@github</a>
+        </div>
+    </div>
+
+    <div class="learningmode" v-if="page == 'learning'">
+
+        <div class="progressbar" id="progressbar"></div>
+        <div class="nowlearning">Now learning <b>{{ selectedCategory.sectionname }}</b></div>
+        <div class="btnclose" @click="goToCourseList">X</div>
+
+        <div class="btnprev" v-if="isNotFirst()" @click="previous">&lt;</div>
+        <div class="btnnext" v-if="isNotLast()" @click="next">&gt;</div>
+
+        <div class="currentcard">
+            <div class="hanzi">{{ selectedCharacter.hanzi }}</div>
+            <div class="translation">{{ selectedCharacter.translation }}</div>
+            <div class="pinyin">( {{ selectedCharacter.pinyin }} )</div>
+        </div>
+
+    </div>
+
+    <div class="practicemode" v-if="page == 'practice'">
+
+        <div class="nowlearning">Now practicing <b>{{ selectedCategory.sectionname }}</b></div>
+        <div class="btnclose" @click="goToCourseList">X</div>
+
+        <div class="currentcard">
+            <div class="hanzi">{{ selectedCharacter.hanzi }}</div>
+            <div class="translation">{{ answer.translation }}</div>
+            <div class="pinyin">( {{ answer.pinyin }} )</div>
+        </div>
+
+        <div class="textinput">
+            <form name="answerForm" @submit.prevent="evaluate">
+                <input type="text" id="answerbox">
+            </form>
+        </div>
+
+    </div>
+</div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.24/vue.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/0.7.2/vue-resource.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="js/sweetalert.min.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+
+</body>
+</html>
