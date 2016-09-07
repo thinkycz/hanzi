@@ -226,8 +226,7 @@ body {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    background: none repeat scroll 0 0 #fff;
-    background: none repeat scroll 0 0 #f9f9f9;
+    background: none repeat scroll 0 0 #D3D3D3;
 }
 
 .sk-spinner-hanzi.sk-spinner {
