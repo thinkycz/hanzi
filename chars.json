@@ -1,0 +1,57 @@
+[
+    {
+        "name": "numbers",
+        "characters": [
+            {
+                "hanzi": "一",
+                "translation": "one",
+                "pinyin": "yi1"
+            },
+            {
+                "hanzi": "二",
+                "translation": "two",
+                "pinyin": "er4"
+            },
+            {
+                "hanzi": "三",
+                "translation": "three",
+                "pinyin": "san1"
+            },
+            {
+                "hanzi": "四",
+                "translation": "four",
+                "pinyin": "si4"
+            },
+            {
+                "hanzi": "五",
+                "translation": "five",
+                "pinyin": "wu3"
+            },
+            {
+                "hanzi": "六",
+                "translation": "six",
+                "pinyin": "liu4"
+            },
+            {
+                "hanzi": "七",
+                "translation": "seven",
+                "pinyin": "qi1"
+            },
+            {
+                "hanzi": "八",
+                "translation": "eight",
+                "pinyin": "ba1"
+            },
+            {
+                "hanzi": "九",
+                "translation": "nine",
+                "pinyin": "qiu3"
+            },
+            {
+                "hanzi": "十",
+                "translation": "ten",
+                "pinyin": "shi2"
+            }
+        ]
+    }
+]

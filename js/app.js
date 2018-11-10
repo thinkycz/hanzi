@@ -85,7 +85,7 @@ new Vue({
     },
 
     ready: function () {
-        this.$http.get('http://api.thinky.cz/chineasy').then(
+        this.$http.get('/chars.json').then(
             function (response) {
                 this.$set('json', response.data);
                 $('#preloader').delay(1000).fadeOut("slow");
